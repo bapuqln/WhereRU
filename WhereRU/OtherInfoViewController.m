@@ -16,7 +16,7 @@
 
 #pragma mark - 数据源方法
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -33,13 +33,15 @@
 #pragma mark - 代理方法
 #pragma mark 重新设置行高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return 10;
+    return 3;
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+
     // Do any additional setup after loading the view.
 }
 
